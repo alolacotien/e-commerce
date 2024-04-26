@@ -1,5 +1,5 @@
 import {AppBar, Badge, Box, IconButton, List, ListItem, Switch, Toolbar, Typography} from "@mui/material";
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {ShoppingCart} from "@mui/icons-material";
 
 const midLinks = [
@@ -57,7 +57,7 @@ function Header({darkMode, handleThemeChange}: Readonly<Props>) {
                 </List>
 
                 <Box display={'flex'} alignItems={'center'}>
-                    <IconButton size={'large'} edge={'end'} color={'inherit'}>
+                    <IconButton component={Link} to={'/basket'} size={'large'} edge={'end'} color={'inherit'}>
                         <Badge badgeContent={4} color={'primary'}>
                             <ShoppingCart/>
                         </Badge>
